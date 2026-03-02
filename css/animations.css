@@ -109,6 +109,31 @@
     animation-delay: 0.2s;
 }
 
+.comisaria-card {
+    animation: fadeIn 0.5s ease-out backwards;
+}
+
+.comisaria-card:nth-child(1) { animation-delay: 0.05s; }
+.comisaria-card:nth-child(2) { animation-delay: 0.1s; }
+.comisaria-card:nth-child(3) { animation-delay: 0.15s; }
+.comisaria-card:nth-child(4) { animation-delay: 0.2s; }
+.comisaria-card:nth-child(5) { animation-delay: 0.25s; }
+.comisaria-card:nth-child(6) { animation-delay: 0.3s; }
+.comisaria-card:nth-child(7) { animation-delay: 0.35s; }
+.comisaria-card:nth-child(8) { animation-delay: 0.4s; }
+.comisaria-card:nth-child(9) { animation-delay: 0.45s; }
+.comisaria-card:nth-child(10) { animation-delay: 0.5s; }
+.comisaria-card:nth-child(11) { animation-delay: 0.55s; }
+.comisaria-card:nth-child(12) { animation-delay: 0.6s; }
+.comisaria-card:nth-child(13) { animation-delay: 0.65s; }
+.comisaria-card:nth-child(14) { animation-delay: 0.7s; }
+.comisaria-card:nth-child(15) { animation-delay: 0.75s; }
+.comisaria-card:nth-child(16) { animation-delay: 0.8s; }
+.comisaria-card:nth-child(17) { animation-delay: 0.85s; }
+.comisaria-card:nth-child(18) { animation-delay: 0.9s; }
+.comisaria-card:nth-child(19) { animation-delay: 0.95s; }
+.comisaria-card:nth-child(20) { animation-delay: 1s; }
+
 .content-block {
     animation: fadeIn 0.8s ease-out;
 }
