@@ -1,0 +1,153 @@
+═══════════════════════════════════════════════════════════════════
+  INSTRUCCIONES PARA AGREGAR IMÁGENES DEL SITIO ORIGINAL
+═══════════════════════════════════════════════════════════════════
+
+PASO 1: CREAR CARPETA DE IMÁGENES
+----------------------------------
+1. Dentro de la carpeta "static", crea una carpeta llamada "images"
+   Ruta completa: static/images/
+
+
+PASO 2: DESCARGAR IMÁGENES DEL SITIO ORIGINAL
+----------------------------------------------
+1. Visita el sitio original:
+   https://sites.google.com/view/div911per/inicio
+   https://sites.google.com/view/div911per/galería
+
+2. Para cada imagen que veas:
+   - Haz clic derecho sobre la imagen
+   - Selecciona "Guardar imagen como..." o "Save image as..."
+   - Guárdala en la carpeta static/images/
+   - Usa nombres descriptivos (ej: centro-operaciones.jpg, sala-videovigilancia.jpg)
+
+3. Imágenes recomendadas a descargar:
+   - Logo o escudo de la división
+   - Centro de operaciones
+   - Sala de videovigilancia
+   - Sala de despacho
+   - Operadores trabajando
+   - Equipamiento tecnológico
+   - Patrullas y vehículos
+   - Unidad móvil
+   - Cualquier otra imagen relevante
+
+
+PASO 3: ACTUALIZAR EL CÓDIGO JAVASCRIPT
+----------------------------------------
+1. Abre el archivo: static/js/gallery.js
+
+2. Busca el array "galleryImages" (líneas 1-50 aproximadamente)
+
+3. Actualiza cada URL de imagen con el nombre del archivo que descargaste:
+
+   ANTES:
+   {
+       id: 1,
+       title: 'Centro de Operaciones',
+       category: 'Instalaciones',
+       url: 'https://lh3.googleusercontent.com/d/1example1'
+   }
+
+   DESPUÉS:
+   {
+       id: 1,
+       title: 'Centro de Operaciones',
+       category: 'Instalaciones',
+       url: 'images/centro-operaciones.jpg'
+   }
+
+4. Repite para todas las imágenes en el array
+
+
+PASO 4: MODIFICAR LA VISUALIZACIÓN DE IMÁGENES
+-----------------------------------------------
+1. En el mismo archivo gallery.js, busca la función loadGallery()
+
+2. Busca esta línea (aproximadamente línea 60):
+   <div class="gallery-image">
+       🖼️
+   </div>
+
+3. Reemplázala con:
+   <div class="gallery-image">
+       <img src="${image.url}" alt="${image.title}" 
+            style="width:100%;height:100%;object-fit:cover;"
+            onerror="this.parentElement.innerHTML='🖼️'">
+   </div>
+
+   Nota: El "onerror" muestra el emoji si la imagen no se encuentra
+
+
+PASO 5: AGREGAR LOGO EN EL HEADER (OPCIONAL)
+---------------------------------------------
+Si descargaste un logo oficial:
+
+1. Guárdalo como: static/images/logo.png
+
+2. Abre: static/js/main.js
+
+3. Busca la función loadHeader() (línea 10 aproximadamente)
+
+4. Busca: <span class="logo-icon">🛡️</span>
+
+5. Reemplaza con:
+   <img src="images/logo.png" alt="Logo" 
+        style="height:40px;width:auto;"
+        onerror="this.outerHTML='<span class=\'logo-icon\'>🛡️</span>'">
+
+
+EJEMPLO COMPLETO DE gallery.js ACTUALIZADO:
+-------------------------------------------
+
+const galleryImages = [
+    { 
+        id: 1, 
+        title: 'Centro de Operaciones', 
+        category: 'Instalaciones',
+        url: 'images/centro-operaciones.jpg'
+    },
+    { 
+        id: 2, 
+        title: 'Sala de Videovigilancia', 
+        category: 'Tecnología',
+        url: 'images/sala-videovigilancia.jpg'
+    },
+    { 
+        id: 3, 
+        title: 'Operadores en servicio', 
+        category: 'Personal',
+        url: 'images/operadores.jpg'
+    },
+    // ... continúa con más imágenes
+];
+
+
+VERIFICACIÓN:
+-------------
+1. Abre index.html en tu navegador
+2. Navega a "Galería"
+3. Deberías ver las imágenes reales en lugar de los emojis
+4. Si ves emojis, verifica:
+   - Que las imágenes estén en static/images/
+   - Que los nombres coincidan exactamente (incluyendo mayúsculas/minúsculas)
+   - Que las extensiones sean correctas (.jpg, .png, etc.)
+
+
+FORMATOS DE IMAGEN RECOMENDADOS:
+---------------------------------
+- JPG/JPEG: Para fotografías
+- PNG: Para logos o imágenes con transparencia
+- WebP: Para mejor compresión (navegadores modernos)
+
+Tamaño recomendado: 800x600 píxeles o similar
+Peso recomendado: Menos de 500KB por imagen
+
+
+¿NECESITAS AYUDA?
+-----------------
+Si tienes problemas:
+1. Verifica la consola del navegador (F12 → Console)
+2. Busca errores de carga de imágenes
+3. Asegúrate de que las rutas sean correctas
+
+═══════════════════════════════════════════════════════════════════
