@@ -1,0 +1,44 @@
+═══════════════════════════════════════════════════════════════════
+  INSTRUCCIONES PARA DESCARGAR EL LOGO DEL 911
+═══════════════════════════════════════════════════════════════════
+
+PASO 1: DESCARGAR EL ESCUDO DEL 911
+------------------------------------
+1. Visita este enlace:
+   https://drive.google.com/file/d/1P0TAduDCOeLGURtmIShb7h0z2cTORd5g/view?usp=sharing
+
+2. Haz clic en el botón de descarga (ícono de flecha hacia abajo)
+   o clic derecho → "Descargar"
+
+3. Guarda el archivo en la carpeta:
+   d:\Landing Page 911 y VV\images\
+
+4. Renombra el archivo a:
+   logo-911.png
+   (o logo-911.jpg dependiendo del formato)
+
+
+PASO 2: CREAR FAVICON
+----------------------
+El favicon ya está configurado en el código para usar:
+   images/logo-911.png
+
+Si necesitas convertir la imagen a formato .ico:
+1. Usa una herramienta online como: https://favicon.io/
+2. Sube la imagen del escudo
+3. Descarga el favicon.ico generado
+4. Guárdalo en: d:\Landing Page 911 y VV\images\favicon.ico
+
+
+VERIFICACIÓN:
+-------------
+Una vez descargada la imagen, el logo aparecerá automáticamente en:
+- El header de todas las páginas
+- El favicon en la pestaña del navegador
+
+Si no aparece, verifica:
+- Que el archivo esté en: images/logo-911.png
+- Que el nombre sea exactamente: logo-911.png
+- Refresca el navegador (Ctrl + F5)
+
+═══════════════════════════════════════════════════════════════════

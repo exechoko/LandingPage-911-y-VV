@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     loadFooter();
     initMobileMenu();
     setActiveNav();
-    autoplayVideo();
 });
 
 function loadHeader() {
@@ -16,7 +15,8 @@ function loadHeader() {
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">
-                    <span class="logo-icon">🛡️</span>
+                    <img src="images/logo-911.png" alt="Logo 911" class="logo-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                    <span class="logo-icon" style="display:none;">🛡️</span>
                     <span>División 911 y V.V</span>
                 </a>
                 
@@ -55,7 +55,8 @@ function loadFooter() {
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>
-                        <span>🛡️</span>
+                        <img src="images/logo-911.png" alt="Logo 911" style="height:30px;width:auto;vertical-align:middle;margin-right:8px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                        <span style="display:none;">🛡️</span>
                         División 911 y V.V
                     </h3>
                     <p>Compromiso con la Seguridad y la Comunidad</p>
@@ -112,14 +113,4 @@ function setActiveNav() {
             link.classList.add('active');
         }
     });
-}
-
-function autoplayVideo() {
-    const videoContainer = document.querySelector('.video-container iframe');
-    if (videoContainer) {
-        const src = videoContainer.src;
-        if (!src.includes('autoplay=1')) {
-            videoContainer.src = src + (src.includes('?') ? '&' : '?') + 'autoplay=1&mute=1';
-        }
-    }
 }

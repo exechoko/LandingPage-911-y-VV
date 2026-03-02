@@ -1,0 +1,105 @@
+═══════════════════════════════════════════════════════════════════
+  INSTRUCCIONES PARA DESCARGAR EL VIDEO DE GOOGLE DRIVE
+═══════════════════════════════════════════════════════════════════
+
+IMPORTANTE: Google Drive no permite ocultar los controles del reproductor
+cuando se usa mediante iframe. Por eso, ahora el sitio usa un video HTML5
+nativo que SÍ permite control total (sin controles, sin sonido).
+
+PASO 1: DESCARGAR EL VIDEO DE GOOGLE DRIVE
+-------------------------------------------
+1. Visita este enlace:
+   https://drive.google.com/file/d/1fUwduKZ1fBTt2xZJSn-AL88l_NftDpho/view
+
+2. Haz clic en el botón de descarga (ícono de tres puntos → Descargar)
+   o clic derecho → "Descargar"
+
+3. Espera a que se descargue el archivo de video
+   (puede tardar dependiendo del tamaño del video)
+
+
+PASO 2: GUARDAR EL VIDEO EN LA CARPETA CORRECTA
+------------------------------------------------
+1. Una vez descargado, mueve el archivo a:
+   d:\Landing Page 911 y VV\videos\
+
+2. Renombra el archivo a:
+   hero-video.mp4
+
+   IMPORTANTE: El nombre debe ser exactamente "hero-video.mp4"
+   (sin espacios, todo en minúsculas)
+
+
+PASO 3: VERIFICAR QUE FUNCIONA
+-------------------------------
+1. Abre o recarga index.html en tu navegador (Ctrl + F5)
+
+2. El video debería reproducirse automáticamente:
+   ✓ Sin sonido
+   ✓ Sin controles de reproducción
+   ✓ En bucle continuo
+   ✓ Cubriendo todo el fondo del header
+
+
+FORMATOS DE VIDEO COMPATIBLES:
+-------------------------------
+- MP4 (recomendado) - Mejor compatibilidad
+- WebM - Buena compresión
+- OGG - Alternativa
+
+Si el video está en otro formato, puedes convertirlo a MP4 usando:
+- https://cloudconvert.com/
+- https://www.freeconvert.com/video-converter
+
+
+OPTIMIZACIÓN DEL VIDEO (OPCIONAL):
+-----------------------------------
+Si el video es muy pesado y tarda en cargar:
+
+1. Comprime el video usando:
+   - HandBrake (https://handbrake.fr/)
+   - CloudConvert (https://cloudconvert.com/)
+
+2. Configuración recomendada:
+   - Resolución: 1920x1080 (Full HD)
+   - Bitrate: 2000-3000 kbps
+   - Codec: H.264
+   - Formato: MP4
+
+3. Para mejor rendimiento web:
+   - Usa resolución 1280x720 si el video es muy grande
+   - Mantén el archivo bajo 10-15 MB si es posible
+
+
+SOLUCIÓN DE PROBLEMAS:
+----------------------
+Si el video no se reproduce:
+
+1. Verifica que el archivo esté en: videos/hero-video.mp4
+2. Verifica que el nombre sea exactamente: hero-video.mp4
+3. Verifica que el formato sea MP4
+4. Abre la consola del navegador (F12) y busca errores
+5. Intenta con otro navegador (Chrome, Firefox, Edge)
+
+
+ALTERNATIVA: USAR OTRO VIDEO
+-----------------------------
+Si quieres usar un video diferente:
+
+1. Guárdalo en: videos/hero-video.mp4
+2. O cambia la referencia en index.html línea 17:
+   <source src="videos/TU-VIDEO.mp4" type="video/mp4">
+
+
+═══════════════════════════════════════════════════════════════════
+
+VENTAJAS DE ESTA SOLUCIÓN:
+- ✓ Sin controles de reproducción visibles
+- ✓ Sin sonido (muted)
+- ✓ Reproducción automática (autoplay)
+- ✓ Bucle infinito (loop)
+- ✓ Compatible con móviles (playsinline)
+- ✓ Control total sobre el video
+- ✓ No depende de servicios externos
+
+═══════════════════════════════════════════════════════════════════
